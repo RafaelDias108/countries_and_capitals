@@ -147,8 +147,9 @@ class MainController extends Controller
             'correct_answer' => $correct_answer,
             'choice_answer' => $answer,
             'current_question' => $current_question,
-            'total_question' => session('total_question')
+            'total_questions' => session('total_questions')
         ];
 
+        return view('answer_result')->with($data);
     }
 }
